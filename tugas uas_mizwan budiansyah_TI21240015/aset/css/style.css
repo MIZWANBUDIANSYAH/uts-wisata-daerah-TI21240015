@@ -1,0 +1,206 @@
+/* ==========================================================
+   Tema: Mewah Modern (Dark Mode)
+   Desain: Elegan, Kontras Tinggi, Biru & Emas
+===========================================================*/
+
+/* Font & Global Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #e5e7eb; /* abu lembut */
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.059), rgba(0,0,0,0.9)),
+              url('/aset/img/wisata\ lombok.jpg') center/cover fixed no-repeat;
+  color: #f3f4f6;
+
+
+  
+}
+
+/* ===============================
+   Header
+==================================*/
+header {
+  background: linear-gradient(90deg, #0f172a, #1e3a8a);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+  color: #facc15; /* warna emas */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header nav a {
+    font-size: 1.2rem ;
+  font-weight: 500;
+  color: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  color: #facc15;
+  text-shadow: 0 0 8px #facc15;
+}
+
+/* ===============================
+   Banner
+==================================*/
+section.relative {
+  position: relative;
+}
+
+section.relative img {
+  filter: brightness(60%) contrast(1.2);
+}
+
+section.relative h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+  animation: fadeInDown 1.2s ease-out;
+}
+
+/* Animasi Halus */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   Kategori Wisata
+==================================*/
+section.container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section.container h3 {
+  color: #facc15;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+section.container .bg-white {
+  background: linear-gradient(180deg, #1f2937, #111827);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+section.container .bg-white:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+  border-color: #facc15;
+}
+
+section.container h4 {
+  color: #60a5fa; /* biru lembut */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ===============================
+   Footer
+==================================*/
+footer {
+  background: #0f172a;
+  color: #9ca3af;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer a {
+  color: #60a5fa;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #facc15;
+  text-shadow: 0 0 8px #facc15;
+}
+
+/* ===============================
+   Responsif
+==================================*/
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 0.75rem;
+  }
+
+  section.relative h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+/* ---------- SCROLL TOP BUTTON ---------- */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  border: none;
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+}
+
+.scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.8);
+}
+
+/* ---------- NAVBAR SCROLL EFFECT ---------- */
+header.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(250, 204, 21, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* ---------- TEKS ANIMASI BANNER ---------- */
+.banner-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+}
